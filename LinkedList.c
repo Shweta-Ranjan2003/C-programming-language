@@ -14,7 +14,7 @@
   We can use whatever locations in memory that are free.
  When we want to insert a new value, we allocate enough memory for both the value we want to store,
   and the address of the next value: for eg if we want to store 
-eg:- if we want 2 after 1 then we have to store pointer to adress of 2 next to 1
+eg:- if we want 2 after 1 then we have to store pointer to address of 2 next to 1
 and next to last element of list we store null pointer.
 running time of O(n) for search and best case running time of inserting or searching will be omega(1).
 basic syntax:- typedef struct sllist  //as we have declare sllnode name at end we cant use here in start so
@@ -35,7 +35,8 @@ typedef struct node //We start this struct with typedef struct node so that we c
 int main()
 { 
     // meathod 1
-    /*int *ptr;
+    /*
+    int *ptr;
     ptr=(int*)malloc(3*sizeof(int));
     if (ptr == NULL)
     {
@@ -68,8 +69,10 @@ int main()
     }
     free(ptr); //Since ptr now points to the same chunk of memory as tmp, we can just call free(ptr).
     */
+    
     //meathod 2
-    /*int *ptr=malloc(3*sizeof(int));
+    /*
+    int *ptr=malloc(3*sizeof(int));
     ptr[0]=1;
     ptr[1]=2;
     ptr[2]=3;
@@ -142,8 +145,8 @@ int main()
      Its easy to insert new element at the start and for that we have to allocate memory the add no. and
      at the next pointer we have to store address of linked list first element . 
      or if we want to insert an element in the middle of two element for eg if 1 is pointing to 2 
-     and we want to insert 5 then first we have to make 1 pointing towards 5 and then 5 pointing 
-     to 2.
+     and we want to insert 5 then first we have to make 5 pointing towards 2 and then 1 pointing 
+     to 5.
 
      //Deleting linked list
      it works like stack(LIFO) means first we have to reach to null pointer(last node pointer) and we have
@@ -157,6 +160,12 @@ int main()
      create a traversal pointer pointing to the list's head then set the traversal pointe to the next pointer
      and if the current node's val is what we are looking for then report success and if reached end of the
      list and couldn't find then report failure.
+     node* temp1 = list;
+     while (temp1->next!=NULL){
+        temp1 = temp1->next;
+        //printf("%i\n",temp->data);
+     }
+     This is traversal
      */
 
     //Doubly linked list
